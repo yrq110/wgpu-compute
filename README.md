@@ -7,7 +7,7 @@ An **experimental library** for easier using WebGPU compute shader.
 Install library
 ```bash
 # use pnpm
-pnpm install @wgpu-compute/core
+pnpm add @wgpu-compute/core
 # or use yarn
 yarn add @wgpu-compute/core
 ```
