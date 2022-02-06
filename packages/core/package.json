@@ -1,0 +1,20 @@
+{
+  "name": "@wgpu-compute/core",
+  "version": "0.0.1",
+  "description": "core classes for webgpu compute shader",
+  "author": "yrq110 <yrq1025@gmail.com>",
+  "license": "MIT",
+  "files": ["dist"],
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf ./dist | node ./script/build.js | tsc"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.7",
+    "esbuild": "^0.14.18",
+    "typescript": "^4.5.2"
+  }
+}

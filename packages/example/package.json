@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "example",
+  "version": "0.0.1",
+  "description": "",
+  "author": "yrq110 <yrq1025@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.7",
+    "typescript": "^4.5.2",
+    "vite": "^2.7.13"
+  },
+  "dependencies": {
+    "@wgpu-compute/core": "workspace:*"
+  }
+}

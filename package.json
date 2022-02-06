@@ -1,0 +1,6 @@
+{
+  "name": "wgpu-compute",
+  "author": "yrq110 <yrq1025@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
