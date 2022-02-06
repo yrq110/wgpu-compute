@@ -8,9 +8,17 @@
   "main": "dist/bundle.js",
   "module": "dist/bundle.js",
   "types": "dist/index.d.ts",
-  "private": true,
   "scripts": {
-    "build": "rm -rf ./dist | node ./script/build.js | tsc"
+    "build": "rm -rf ./dist | node ./script/build.js | tsc",
+    "publish": "npm publish"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/yrq110/wgpu-compute",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yrq110/wgpu-compute.git"
   },
   "devDependencies": {
     "@webgpu/types": "^0.1.7",
