@@ -1,3 +1,14 @@
 # @wgpu-compute/core
 
-core classes for WebGPU compute shader
+## Main
+
+* ComputeContext
+* ComputeEffect
+* ComputeShader
+* ComputeBindGroup
+
+## Data
+
+* StorageBuffer
+* UniformBuffer
+* Texture

@@ -25,6 +25,7 @@ pnpm run dev --filter example
 Let's do a matrix multiplication:
 
 1. create a compute context
+
    ```ts
    import { ComputeContext, ComputeShader, StorageBuffer } from '@wgpu-compute/core';
 
@@ -32,6 +33,7 @@ Let's do a matrix multiplication:
    ```
 
 2. load source shader and declare bindGroup layout which used in the shader
+
    ```ts
    const cs = new ComputeShader('matrix', context, {
      source: shader,
@@ -43,7 +45,10 @@ Let's do a matrix multiplication:
    });
    ```
 
-   and the shader may be like (in WGSL):
+   and the shader may be like this (in WGSL):
+
+   <details>
+   <summary>shader content</summary>
 
    ```wgsl
    struct Matrix {
@@ -72,8 +77,8 @@ Let's do a matrix multiplication:
    }
 
    ```
-
-3. create required storage or uniform buffer in the shader, including source and target buffer
+   </details>
+4. create required storage or uniform buffer in the shader, including source and target buffer
    ```ts
    const firstMatrix = new Float32Array([
      2 /* rows */, 4 /* columns */,
@@ -100,12 +105,12 @@ Let's do a matrix multiplication:
    cs.setStorageBuffer('resultMatrix', resultBuffer);
    ```
 
-4. dispatch compute shader task
+5. dispatch compute shader task
    ```ts
    cs.dispatch(firstMatrix[0], secondMatrix[1]);
    ```
 
-5. submit commands and get result
+6. submit commands and get result
    ```ts
    const resPromise = resultBuffer.read();
 
@@ -117,26 +122,10 @@ Let's do a matrix multiplication:
    console.log('result matrix: ', array);
    ```
 
-## Foundamental
+## Documents
 
-also the main classes in `packages/core` path:
-
-* ComputeContext
-* ComputeEffect
-* ComputeShader
-* ComputeBindGroup
-* StorageBuffer
-* UniformBuffer
-* Texture
-
-## Examples
-
-examples in `packages/example` path: 
-
-* Vanila WebGPU Compute Shader
-* Basic Storage and Uniform Buffer
-* Basic Storage Texture
-* Compute Effect Encapsulation
+* [Core](./packages/core/README.md)
+* [Examples](./packages/example/README.md)
 
 ## Refs
 
